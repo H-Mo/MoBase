@@ -1,19 +1,18 @@
 package moe.div.mobasetest;
 
-import android.os.Bundle;
+import android.os.Message;
 
-import androidx.annotation.Nullable;
-import moe.div.mobase.activity.MoBaseActivity;
+import moe.div.mobase.activity.BaseActivity;
 
 /**
- * @author 林墨
+ * @author 涂山墨墨
  * @time 20/3/22  14:25
  * @desc
  */
-public class TestActivity extends MoBaseActivity {
+public class TestActivity extends BaseActivity {
 
     @Override
-    protected void initView(@Nullable Bundle savedInstanceState) {
+    protected void initView() {
         // 设置布局已经找控件
     }
 
@@ -25,5 +24,10 @@ public class TestActivity extends MoBaseActivity {
     @Override
     protected void initEvent() {
         // 设置事件
+    }
+
+    @Override
+    protected void handleMyMessage(Message msg) {
+        // 处理主线程消息
     }
 }

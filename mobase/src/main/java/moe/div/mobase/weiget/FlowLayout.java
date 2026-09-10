@@ -6,12 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 /**
- * @author 林墨
+ * @author 涂山墨墨
  * @time 17/5/24  14:46
  * @desc 网上Copy的流布局
  */
-public class FlowLayout  extends ViewGroup {
-
+public class FlowLayout  extends ViewGroup{
     public FlowLayout(Context context) {
         super(context);
     }

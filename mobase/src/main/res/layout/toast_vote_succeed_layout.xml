@@ -24,7 +24,7 @@
                 android:layout_height="55dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:src="@mipmap/success_img"/>
+                android:src="@drawable/google_success"/>
 
             <TextView
                 android:id="@+id/hint_text"

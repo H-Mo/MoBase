@@ -1,22 +1,14 @@
-apply plugin: 'com.android.library'
-
-ext {
-    PUBLISH_GROUP_ID = 'moe.div'
-    PUBLISH_ARTIFACT_ID = 'mobase'
-    PUBLISH_VERSION = '1.0'
+plugins {
+    id 'com.android.library'
 }
 
 android {
-    compileSdkVersion 33
-    buildToolsVersion "33"
-
+    namespace 'moe.div.mobase'
+    compileSdk 37
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 33
-        versionCode 1
-        versionName "1.0"
-
+        minSdk 29
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
     }
 
@@ -27,13 +19,15 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation "androidx.recyclerview:recyclerview:1.2.1"
 
+    api 'androidx.appcompat:appcompat:1.8.0'
+    api 'com.google.android.material:material:1.14.0'
 }
-
-apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'
