@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import moe.div.mobase.adapter.MoBaseRecyclerAdapter;
 
 /**
- * @author 林墨
+ * @author 涂山墨墨
  * @time 20/3/22  14:27
  * @desc
  */
@@ -22,7 +22,8 @@ public class TestAdapter extends MoBaseRecyclerAdapter<String, TestAdapter.TestH
     }
 
     @Override
-    protected void onBindData(TestHolder holder, int position) {
+    public void onBindViewHolder(@NonNull TestHolder holder, int position) {
+        super.onBindViewHolder(holder, position);
         // 绑定数据
     }
 

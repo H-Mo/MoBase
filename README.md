@@ -1,14 +1,16 @@
 # MoBase
 
-提供了基础的类供以继承。
+Android 基础库，提供 Activity / Fragment 生命周期模板、RecyclerView Adapter 基类、运行时权限、应用语言、加载对话框、Toast 与 FlowLayout。
+
+2.0.0 的最低支持版本为 Android 10（API 29），包名为 `moe.div.mobase`。
 
 ### Activity
 
 ```java
-public class TestActivity extends MoBaseActivity {
+public class TestActivity extends BaseActivity {
 
     @Override
-    protected void initView(@Nullable Bundle savedInstanceState) {
+    protected void initView() {
         // 设置布局已经找控件
     }
 
@@ -21,6 +23,11 @@ public class TestActivity extends MoBaseActivity {
     protected void initEvent() {
         // 设置事件
     }
+
+    @Override
+    protected void handleMyMessage(Message msg) {
+        // 处理主线程消息
+    }
 }
 
 ```
@@ -29,7 +36,7 @@ public class TestActivity extends MoBaseActivity {
 ### Fragment
 
 ```java
-public class TestFragment extends MoBaseFragment {
+public class TestFragment extends BaseFragment {
 
     @Override
     protected View initView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -63,7 +70,8 @@ public class TestAdapter extends MoBaseRecyclerAdapter<String, TestAdapter.TestH
     }
 
     @Override
-    protected void onBindData(TestHolder holder, int position) {
+    public void onBindViewHolder(@NonNull TestHolder holder, int position) {
+        super.onBindViewHolder(holder, position);
         // 绑定数据
     }
 
@@ -81,5 +89,4 @@ public class TestAdapter extends MoBaseRecyclerAdapter<String, TestAdapter.TestH
 
 }
 ```
-
 

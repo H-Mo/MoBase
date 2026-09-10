@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MoBase</string>
+    <string name="app_loading">Loading</string>
+    <string name="dialog_confirm">Confirm</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="error_dialog_title">Tip</string>
+</resources>

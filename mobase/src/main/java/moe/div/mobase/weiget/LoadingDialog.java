@@ -21,7 +21,9 @@ public class LoadingDialog extends Dialog {
     public LoadingDialog(Context context) {
         super(context);
         /**设置对话框背景透明*/
-        getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        if (getWindow() != null) {
+            getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        }
         // 取消掉对话框的标题栏
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.dialog_loading_layout);
@@ -36,7 +38,9 @@ public class LoadingDialog extends Dialog {
      * @return build模式设计，可以链式调用
      */
     public LoadingDialog setMessage(String message) {
-        tv_text.setText(message);
+        if (tv_text != null) {
+            tv_text.setText(message);
+        }
         return this;
     }
 }

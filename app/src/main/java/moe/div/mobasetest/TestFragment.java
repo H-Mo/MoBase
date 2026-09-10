@@ -5,14 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import moe.div.mobase.fragment.MoBaseFragment;
+import moe.div.mobase.fragment.BaseFragment;
 
 /**
- * @author 林墨
+ * @author 涂山墨墨
  * @time 20/3/22  14:26
  * @desc
  */
-public class TestFragment extends MoBaseFragment {
+public class TestFragment extends BaseFragment {
 
     @Override
     protected View initView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

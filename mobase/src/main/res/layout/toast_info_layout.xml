@@ -30,7 +30,7 @@
                 android:layout_height="25dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
-                android:src="@mipmap/toast_success"/>
+                android:src="@drawable/google_success"/>
 
             <TextView
                 android:id="@+id/hint_text"
